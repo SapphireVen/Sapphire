@@ -1,14 +1,6 @@
 const Discord = require("discord.js");
-const moment = require('moment');
-const today = moment(new Date()); 
-const Enmap = require("enmap");
 const fs = require("fs");
 const client = new Discord.Client();
-const config = require("./config.json");
-
-
-client.config = config;
-
 
 
 fs.readdir("./events/", (err, files) => {
@@ -60,8 +52,8 @@ fs.readdir("./funcommands/", (err, files) => {
 
 client.on("ready", () => {
   client.user.setStatus('Online')
-  client.user.setActivity(`-help | ${client.guilds.cache.size} servers`);
-  console.log("Sapphire has come online.");
+  client.user.setActivity("ACTIVITY);
+  console.log("BOT NAME has come online.");
 });
 
-client.login(config.token);
+client.login("TOKEN");
