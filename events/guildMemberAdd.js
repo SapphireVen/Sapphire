@@ -1,20 +1,18 @@
 const Discord = require('discord.js');
-const moment = require('moment');
-const today = moment(new Date());
 
 module.exports = (client, guildMember) => {
     const embedcolor = '#15dbf3'
 
     // ─── DEFINED GUILDS ─────────────────────────────────────────────────────────────────────
-    const gayzone = client.guilds.cache.get("699015211096473670");
+    const gayzone = client.guilds.cache.get("GUILD ID");
     // ─────────────────────────────────────────────────────────────────────────────────
 
     // ─── GUILD LOGS ─────────────────────────────────────────────────────────────────────
-    const gayzonelogs = client.channels.cache.get("699324175965356184");
+    const gayzonelogs = client.channels.cache.get("CHANNEL ID");
     // ─────────────────────────────────────────────────────────────────────────────────
 
     // ─── MEMBER COUNT CHANNELS ─────────────────────────────────────────────────────────────────────
-    const gzmembercount = client.channels.cache.get('699630100575944807')
+    const gzmembercount = client.channels.cache.get('CHANNEL ID')
     let memberCount = gayzone.memberCount;
     // ─────────────────────────────────────────────────────────────────────────────────
 
@@ -24,14 +22,13 @@ module.exports = (client, guildMember) => {
         }))
         .setAuthor("Sapphire Join Logging")
         .setColor(embedcolor)
-        .addField("__Registered On__", `${moment(guildMember.user.createdAt).format('**LL**')}`)
 
 
     // ─── GUILDS ─────────────────────────────────────────────────────────────────────
 
     if (gayzone) {
         const memberCount = gayzone.memberCount;
-        memberaddembed.setDescription(`${guildMember.displayName} has joined the server on ` + today.format('**LL**') + ` at ` + today.format('**LT**.') + `\n \n` + '`Server Member Count:`' + ` **${memberCount}**`)
+        memberaddembed.setDescription(`${guildMember.displayName} has joined the server  + `\n \n` + '`Server Member Count:`' + ` **${memberCount}**`)
         gzmembercount.setName("Member Count: " + `${memberCount}`)
         gayzonelogs.send(memberaddembed)
     }
