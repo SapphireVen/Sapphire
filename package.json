@@ -1,0 +1,19 @@
+{
+  "name": "sapphire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^6.0.1",
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0",
+    "enmap": "^5.2.4",
+    "moment": "^2.24.0",
+    "sqlite3": "^4.1.1"
+  }
+}
